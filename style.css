@@ -3,24 +3,35 @@
     body{
         overflow-y: scroll;
     }
+    /* Avec ceci, on adapte la taille de la fenêtre 
+    principale en fonction de celle de la fenêtre */
     .milieu{
         width:90% !important;
-        margin-left:auto;
-        margin-right:auto;
+    }
+    #article{
+        display: none;
     }
 }
 @media print  {
-    #header, #footer, #nav, #section { display: none !important;
+    header, footer, .menu, .section { display: none !important;
     }
+}
+
+header a{
+    color:white !important;
+    text-decoration:none;
+}
+header a:hover{
+    text-decoration:underline
 }
 
 body{
     margin:0;
-    background-image: url("img/bg.png");
+    background-image: url("/img/bg.png");
     font-family: 'Hind', sans-serif;
 }
 /* BARRE LANG */
-.header, .footer{
+header, footer{
     background-color: #024279;
 }
 .milieu{
@@ -28,18 +39,22 @@ body{
     margin-left:auto;
     margin-right:auto;
 }
-.header .milieu div{
+header .milieu div{
      padding-top:20px;
      padding-bottom :4px;
     color: #fff;
     text-align:right;
 } 
 /* BARRE MENU */
+.menu a{
+    color: #444;
+}
+
 .menu{
     background-color: #ccc;
     box-shadow: 1px 10px 18px 0px rgba(0,0,0,0.3);
 }
-.menu div{
+.menu nav{
     padding-top:50px;
     padding-left:10px;
     padding-bottom:2px;
@@ -54,7 +69,7 @@ body{
     padding:20px;
 }
 /* footer */
-.footer div{
+footer div{
     padding-top: 10px;
     padding-bottom: 10px;
     color:#fff;
